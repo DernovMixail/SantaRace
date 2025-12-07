@@ -7,10 +7,10 @@
     <title>Unity WebGL Player | Coockie</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      // Инициализация Unity
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/cooc.json");
+      // Г€Г­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Unity
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SantaRace.json");
       
-      // Автоматическая адаптация размера при загрузке и изменении окна
+      // ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ Гї Г Г¤Г ГЇГІГ Г¶ГЁГї Г°Г Г§Г¬ГҐГ°Г  ГЇГ°ГЁ Г§Г ГЈГ°ГіГ§ГЄГҐ ГЁ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГЁ Г®ГЄГ­Г 
       window.addEventListener('load', resizeUnity);
       window.addEventListener('resize', resizeUnity);
       window.addEventListener('orientationchange', resizeUnity);
@@ -20,7 +20,7 @@
         var canvas = container.querySelector('canvas');
         
         if (canvas) {
-          // Устанавливаем на весь экран
+          // Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ Г­Г  ГўГҐГ±Гј ГЅГЄГ°Г Г­
           container.style.width = '100vw';
           container.style.height = '100vh';
           
@@ -31,14 +31,14 @@
       }
     </script>
     <style>
-      /* Сброс отступов */
+      /* Г‘ГЎГ°Г®Г± Г®ГІГ±ГІГіГЇГ®Гў */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
       
-      /* На весь экран всегда */
+      /* ГЌГ  ГўГҐГ±Гј ГЅГЄГ°Г Г­ ГўГ±ГҐГЈГ¤Г  */
       html, body {
         width: 100%;
         height: 100%;
@@ -46,14 +46,14 @@
         background: black;
       }
       
-      /* Контейнер Unity всегда на весь экран */
+      /* ГЉГ®Г­ГІГҐГ©Г­ГҐГ° Unity ГўГ±ГҐГЈГ¤Г  Г­Г  ГўГҐГ±Гј ГЅГЄГ°Г Г­ */
       #unityContainer {
         width: 100vw;
         height: 100vh;
         background: black;
       }
       
-      /* Canvas занимает весь контейнер */
+      /* Canvas Г§Г Г­ГЁГ¬Г ГҐГІ ГўГҐГ±Гј ГЄГ®Г­ГІГҐГ©Г­ГҐГ° */
       #unityContainer canvas {
         width: 100% !important;
         height: 100% !important;
