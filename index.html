@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Unity WebGL Player | Coockie</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      // Инициализация Unity
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/cooc.json");
+      
+      // Автоматическая адаптация размера при загрузке и изменении окна
+      window.addEventListener('load', resizeUnity);
+      window.addEventListener('resize', resizeUnity);
+      window.addEventListener('orientationchange', resizeUnity);
+      
+      function resizeUnity() {
+        var container = document.getElementById('unityContainer');
+        var canvas = container.querySelector('canvas');
+        
+        if (canvas) {
+          // Устанавливаем на весь экран
+          container.style.width = '100vw';
+          container.style.height = '100vh';
+          
+          canvas.style.width = '100%';
+          canvas.style.height = '100%';
+          canvas.style.objectFit = 'contain';
+        }
+      }
+    </script>
+    <style>
+      /* Сброс отступов */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      /* На весь экран всегда */
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: black;
+      }
+      
+      /* Контейнер Unity всегда на весь экран */
+      #unityContainer {
+        width: 100vw;
+        height: 100vh;
+        background: black;
+      }
+      
+      /* Canvas занимает весь контейнер */
+      #unityContainer canvas {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="unityContainer"></div>
+  </body>
+</html>

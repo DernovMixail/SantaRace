@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "SantaRace",
+"productVersion": "0.1",
+"dataUrl": "SantaRace.data.unityweb",
+"wasmCodeUrl": "SantaRace.wasm.code.unityweb",
+"wasmFrameworkUrl": "SantaRace.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.41f2"
+}
